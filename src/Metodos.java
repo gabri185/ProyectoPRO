@@ -1,6 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -17,14 +15,13 @@ public class Metodos {
         int precio =  Integer.parseInt(JOptionPane.showInputDialog("Engade precio= "));
         int nUnidades = Integer.parseInt(JOptionPane.showInputDialog("Engade unidades totales= "));
         String color = JOptionPane.showInputDialog("Engade color= ");
-
         Tienda ti= new Tienda(nombre,marca,talla,precio,nUnidades,color);
         return ti;
     }
 */
 
 
-    public static Tienda pedirZapatos(String nomeFich, ArrayList <Tienda> listaZapatos) throws FileNotFoundException{
+    public static Tienda pedirZapatos(String nomeFich, ArrayList <Tienda> listaZapatos) throws IOException {
         String nombre = JOptionPane.showInputDialog("Engade nombre= ");
         String marca = JOptionPane.showInputDialog("Engade marca= ");
         String color = JOptionPane.showInputDialog("Engade color= ");
@@ -34,33 +31,26 @@ public class Metodos {
 
         Tienda ti= new Tienda(nombre,marca,talla,precio,nUnidades,color);
         listaZapatos.add(ti);
-        File fi;
-        fi = new File(nomeFich+".txt");
+        File f = new File(nomeFich+".txt");
+        FileWriter fi = new FileWriter(f,true);
         PrintWriter esc =null;
         try {
             esc = new PrintWriter(fi);
-            esc.println(talla);
-            esc.println(marca);
-            esc.println(nombre);
-            esc.println(precio);
-            esc.println(color);
-            esc.println(nUnidades);
+            esc.println(nombre+ ", " +marca+ ", " +talla+ ", " +precio+ ", " +color+ ", " +nUnidades);
 
-        }catch (FileNotFoundException ex){
-            System.out.println(" erro escribirNumeros "+ ex.toString());
-        }
-        finally{
+        } finally{
             esc.close();
         }
         return ti;
 
     }
-    public static void engadirElemento(ArrayList<Tienda> listaZapatos) throws FileNotFoundException {
-        Tienda za=pedirZapatos ("Ficheiro", listaZapatos);
+    public static void engadirElemento(ArrayList<Tienda> listaZapatos) throws IOException {
+        Tienda za= pedirZapatos("Ficheiro", listaZapatos);
         listaZapatos.add(za);
     }
 
 
 
 }
+
 

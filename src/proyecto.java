@@ -1,11 +1,12 @@
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 
 public class proyecto {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         ArrayList <Tienda>lista = new ArrayList<Tienda>();
         String opcion;
         do {
