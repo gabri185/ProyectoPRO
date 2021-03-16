@@ -21,7 +21,7 @@ public class Metodos {
 
 
     public static Tienda pedirZapatos(){
-        String nombre = JOptionPane.showInputDialog("Engade nombre= ");
+        String nombre = JOptionPane.showInputDialog("Engade nombres= ");
         String marca = JOptionPane.showInputDialog("Engade marca= ");
         String color = JOptionPane.showInputDialog("Engade color= ");
         int talla = Integer.parseInt(JOptionPane.showInputDialog("Engade talla= "));
