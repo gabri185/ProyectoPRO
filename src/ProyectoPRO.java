@@ -32,7 +32,7 @@ public class ProyectoPRO {
                         Metodos.catalogo(f);
                         break;
                     case "5":
-                        Metodos.vender(lista);
+                        FichArray.vender("Zapatillas",lista);
                         break;
                     case "6":
                         Metodos.guardar("Zapatillas", lista);
