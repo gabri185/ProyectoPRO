@@ -25,8 +25,9 @@
 
                 for(int i = 0; i < arrayList2.size(); i++) {
                     System.out.println( "arrayList2[" + i + "] = " + arrayList2.get(i) );
-                    if(i==10){
-                        int numUnidades=i;
+                    int unidades = Integer.parseInt(JOptionPane.showInputDialog("Cuantas unidades tenemos?:  "));
+                    if(i==unidades){
+                         int numUnidades=i;
                         numUnidades = numUnidades-1;
                         System.out.println(i);
                     }
