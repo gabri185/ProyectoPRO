@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.*;
-
+import LibreriaCOD.*;
 /**
  * Creado por @autor: gabriel
  * El  23 de mar. de 2021.
