@@ -1,4 +1,6 @@
- public class Tienda {
+package Clases;
+
+public class Tienda {
 
         private String nombre;
         private String marca;
@@ -73,9 +75,9 @@
             return " nombre=" + nombre +
                     " marca=" + marca +
                     " talla=" + talla +
+                    " color=" + color +
                     " precio=" + precio +
-                    " nUnidades=" + nUnidades +
-                    " color=" + color ;
+                    " nUnidades=" + nUnidades;
         }
 
 

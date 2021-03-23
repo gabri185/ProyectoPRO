@@ -1,7 +1,10 @@
+package Clases;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.*;
+import LibreriaCOD.PedirDatos;
 /**
  * Creado por @autor: gabriel
  * El  23 de mar. de 2021.
@@ -15,12 +18,15 @@ public class Metodos {
      * @return
      */
     public static Tienda pedirZapatos() {
-        String nombre = JOptionPane.showInputDialog("Engade nombre= ");
-        String marca = JOptionPane.showInputDialog("Engade marca= ");
-        String color = JOptionPane.showInputDialog("Engade color= ");
-        String talla = JOptionPane.showInputDialog("Engade talla + eu= ");
-        int precio = Integer.parseInt(JOptionPane.showInputDialog("Engade precio= "));
-        int nUnidades = Integer.parseInt(JOptionPane.showInputDialog("Engade numUnidades= "));
+        String nombre = PedirDatos.pedirString("Engade nombre=");
+        //String nombre = JOptionPane.showInputDialog("Engade nombre= ");
+        String marca = PedirDatos.pedirString("Engade marca=");
+        String color = PedirDatos.pedirString("Engade color=");
+        String talla = PedirDatos.pedirString("Engade talla + eu=");
+        //int precio = Integer.parseInt(JOptionPane.showInputDialog("Engade precio= "));
+        //int nUnidades = Integer.parseInt(JOptionPane.showInputDialog("Engade numUnidades= "));
+        int precio = PedirDatos.pedirInt("Engade precio=");
+        int nUnidades = PedirDatos.pedirInt("Engade numero de unidades=");
 
         Tienda ti = new Tienda(nombre, marca, talla, precio, nUnidades, color);
 

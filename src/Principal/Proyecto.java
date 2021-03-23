@@ -1,3 +1,5 @@
+package Principal;
+
 
 
 import java.awt.event.ActionEvent;
@@ -9,6 +11,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
+import Clases.Metodos;
+import Clases.Tienda;
 
 /**
  * Creado por @autor: gabriel
@@ -115,3 +119,4 @@ class Proyecto extends JFrame implements ActionListener {
     }
 
 }
+
