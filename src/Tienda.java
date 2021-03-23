@@ -2,7 +2,7 @@
 
         private String nombre;
         private String marca;
-        private int talla;
+        private String talla;
         private double precio;
         private int nUnidades;
         private String color;
@@ -10,7 +10,7 @@
         public Tienda() {
         }
 
-        public Tienda(String nombre, String marca, int talla, double precio, int nUnidades, String color) {
+        public Tienda(String nombre, String marca, String talla, double precio, int nUnidades, String color) {
             this.nombre = nombre;
             this.marca = marca;
             this.talla = talla;
@@ -36,11 +36,11 @@
             this.marca = marca;
         }
 
-        public int getTalla() {
+        public String getTalla() {
             return talla;
         }
 
-        public void setTalla(int talla) {
+        public void setTalla(String talla) {
             this.talla = talla;
         }
 
@@ -70,12 +70,12 @@
 
         @Override
         public String toString() {
-            return "nombre=" + nombre +
-                    "marca=" + marca +
-                    "talla=" + talla +
-                    "precio=" + precio +
-                    "nUnidades=" + nUnidades +
-                    "color=" + color ;
+            return " nombre=" + nombre +
+                    " marca=" + marca +
+                    " talla=" + talla +
+                    " precio=" + precio +
+                    " nUnidades=" + nUnidades +
+                    " color=" + color ;
         }
 
 
